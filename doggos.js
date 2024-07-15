@@ -31,10 +31,12 @@ function imageLoader(url) {
             const img = document.createElement("img");
             img.src = data.message;
             document.querySelector(".doggos").appendChild(img);
+            img.addEventListener("load", function() {
+                loader.style.display = "none";
+                img.style.boxShadow = "0 5px 20px rgba(0, 0, 0, 0.75)";
+            })
         })
-        .finally(function() {
-            loader.style.display = "none";
-        })
+        
 }
 
 select.addEventListener("change", function(event) {
