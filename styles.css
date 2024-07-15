@@ -1,0 +1,330 @@
+* {
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: #024070;
+    color: white;
+}
+
+.headtext::selection {
+    background-color: white;   
+    color: #024070;
+}
+
+body {
+    background: #87CEEB;
+    padding: 0;
+    margin: 0;
+    font-family: 'Amatic SC';
+    overflow-x: hidden;
+    filter: blur(0.55px);
+}
+
+header {
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+@keyframes clouds {
+    to {
+       left: 100%;
+    }
+}
+
+.cloud2, .cloud3, .cloud4, .cloud5, .cloud6, .cloud7, .cloud8 {
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    height: 100px;
+    background-color: white;
+    border-radius: 100px;
+    top: 4rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    animation: clouds 60s ease-in-out infinite alternate;
+}
+
+.cloud2 {
+    top: 2rem;
+    left: 10rem;
+    animation-duration: 140s;
+}
+
+.cloud3 {
+    top: 5rem;
+    left: 30rem;
+    animation-duration: 120s;
+}
+
+.cloud4 {
+    top: 3.5rem;
+    left: 50rem;
+    animation-duration: 150s;
+}
+
+.cloud5 {
+    top: 7rem;
+    left: 60rem;
+    animation-duration: 160s;
+}
+
+.cloud6 {
+    top: 9rem;
+    left: 90rem;
+    animation-duration: 100s;
+}
+
+.cloud7 {
+    top: 5rem;
+    left: 105rem;
+    animation-duration: 110s;
+}
+
+.cloud8 {
+    top: 1rem;
+    left: 75rem;
+    animation-duration: 130s;
+}
+
+.cloud:before, .cloud:after, .cloud2:before, .cloud2:after, .cloud3:before, .cloud3:after, .cloud4:before, .cloud4:after, .cloud5:before, .cloud5:after, .cloud6:before, .cloud6:after, .cloud7:before, .cloud7:after, .cloud8:before, .cloud8:after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    border-radius: 100px;
+}
+
+.cloud:before, .cloud2:before, .cloud3:before, .cloud4:before, .cloud5:before, .cloud6:before, .cloud7:before, .cloud8:before {
+    width: 80px;
+    height: 80px;
+    top: -30px;
+    left: 50px;
+}
+
+.cloud:after, .cloud2:after, .cloud3:after, .cloud4:after, .cloud5:after, .cloud6:after, .cloud7:after, .cloud8:after {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    right: 50px;
+}
+
+.logo {
+    z-index: 2;
+    max-width: 19vw;
+    max-height: 24vh;
+    min-width: 9rem;
+    min-height: 8rem;
+    margin: 0 0 0 -3rem;
+    user-select: none;
+}
+
+h1 {
+    z-index: 2;
+    color: #024070;
+    font-family: 'Lobster Two';
+    font-size: 4vw;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 1300px) {
+    h1 {
+        font-size: 3.2rem;
+    }
+}
+
+.headtext {
+    font-size: 1.4rem;
+    z-index: 2;
+    font-weight: 900;
+}
+
+@keyframes select-text {
+    from {
+        font-size: 5rem;
+    }
+    to {
+        font-size: 6rem;
+    }
+}
+
+@keyframes click-text {
+    from {
+        color: black;
+    }
+    to {
+        color: white;
+    }
+}
+
+
+.selector {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5rem;
+    gap: 2rem;
+    margin-top: -3rem;
+}
+
+.selector > p {
+    z-index: 1;
+    font-size: 2.5rem;
+    font-weight: 900;
+    animation: click-text 2s ease-in-out alternate infinite;
+}
+
+.display-text {
+    text-align: center;
+    margin: 10vh auto;
+    width: 50vw;
+    animation: select-text 3s ease-in-out alternate infinite;
+}
+
+.doggos {
+    display: flex;
+    justify-content: center;
+}
+
+.doggos > img {
+    position: relative;
+    z-index: 6;
+    margin-top: -5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.75);
+    user-select: none;
+    top: 10vh;
+    width: 400px;
+    background-size: cover;
+}
+
+.breeds {
+    z-index: 1;
+    width: 15rem;
+    height: 3rem;
+    background-color: #C1A37B;
+    border: 3px solid #024070;
+    border-radius: 50px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Amatic SC';
+    color: #2E8B57;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 2rem;
+}
+
+.sun {
+    position: absolute;
+    left: 18rem;
+    top: 0;
+    z-index: -1;
+    border-radius: 50%;
+    width: 25rem;
+    height: 25rem;
+    background: radial-gradient(circle, #FFFF00, #FFD700, #FFA500);
+    box-shadow: 0 0 1000px rgb(204, 204, 44);
+}
+
+.earth {
+    position: absolute;
+    top: 90vh;
+    width: 100vw;
+    height: 20vh;
+    background: linear-gradient(to bottom, springgreen 0%, #00D555 40%, sienna 97%);
+    box-shadow: 0 0 20px rgba(0, 247, 119, 0.5);
+}
+
+footer {
+    position: absolute;
+    top: 110vh;
+    width: 100vw;
+    height: 94vh;
+    background: linear-gradient(to bottom, sienna 0%, #654321 40%, #543212 80%, #432101 90%);
+}
+
+h2 {
+    font-size: 5rem;
+    font-weight: 900;
+    margin-left: 2.5rem;
+    color: snow;
+}
+
+footer > p {
+    font-weight: 900;
+    font-size: 2rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    color: beige;
+}
+
+footer > p > span {
+    font-family: 'Lobster Two';
+    font-weight: 900;
+    color: #024070;
+    text-shadow: 0 0 20px #dba783;
+}
+
+.divider {
+    margin: auto;
+    width: 95vw;
+    height: 1px;
+    background: white;
+    margin-bottom: 3rem;
+}
+
+address {
+    font-size: 2rem;
+    color: #FF6347;
+    margin-left: 2.5rem;
+
+}
+
+.made-by {
+    font-size: 2rem;
+    color: #FF6347;
+}
+
+.made-by span {
+    color: #87CEEB;
+    text-shadow: 0 0 20px #dba783;
+}
+
+.end-stuff {
+    font-weight: 900;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 2.5rem;
+}
+
+.made-by::selection, address::selection {
+    color: white;
+    background-color: #FF6347;
+}
+
+.made-by > span::selection {
+    color: white;
+    background-color: #87CEEB;
+}
+
+@keyframes spin {
+    to {
+      transform: rotateZ(360deg);
+    }
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    display: none;
+    position: absolute;
+    top: 42.5vh;
+    user-select: none;
+    width: 10rem;
+    height: 10rem;
+    animation: spin 1s ease-in-out infinite;
+}
